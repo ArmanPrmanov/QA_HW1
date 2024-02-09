@@ -11,7 +11,7 @@ import static parser.Lexer.tokenizer;
 public class Main {
 
     public static void main(String[] args) {
-        String input = " ";
+        String input = "1 + 2";
         List<Lexer.Token> tokens = tokenizer(input);
         for (Lexer.Token token : tokens) {
             System.out.println(token.toString());

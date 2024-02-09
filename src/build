@@ -1,0 +1,10 @@
+#!/bin/bash
+
+jpath=/usr/share/java
+
+javac -d objects parser/Lexer.java parser/AST.java parser/Prs.java
+javac -cp objects Main.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar LexerTests.java
+javac -cp .:objects:"$jpath"/junit-4.13.2.jar Tester.java
+
+java -cp .:objects:"$jpath"/junit.jar:"$jpath"/hamcrest-core.jar org.junit.runner.JUnitCore Tester

@@ -103,7 +103,7 @@ public class Lexer {
         return false;
     }
 
-    private static boolean isVar(String word, int debugLevel) {
+    public static boolean isVar(String word, int debugLevel) {
         int i = 0;
         if( i >= word. length( ) )
         {
