@@ -4,7 +4,8 @@ import org.junit.runners.Suite;
 @RunWith( Suite.class )
 
 @Suite.SuiteClasses({
-	LexerTests.class
+	LexerTests.class,
+	AstTests.class
 })
 
 public class Tester { }
