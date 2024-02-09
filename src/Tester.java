@@ -7,7 +7,8 @@ import parser.Prs;
 @Suite.SuiteClasses({
 	LexerTests.class,
 	PrsTests.class,
-	AstTests.class
+	AstTests.class,
+	ParamBinaryOprTests.class
 })
 
 public class Tester { }

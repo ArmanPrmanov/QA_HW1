@@ -3,6 +3,7 @@ package parser;
 import java.util.List;
 import parser.Lexer.Symbol;
 
+
 public class AST {
     public static abstract class BaseExpr {
         protected Symbol sym;
@@ -68,7 +69,7 @@ public class AST {
                     return v1 * v2;
                 case DIVISION:
                     if (v2 == 0)
-                        throw new ArithmeticException("division by zero");
+                        return Double.NaN;
                     return v1 / v2;
                 case POWER:
                     return Math.pow(v1, v2);
