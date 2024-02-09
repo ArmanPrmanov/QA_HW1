@@ -7,7 +7,12 @@ javac -cp objects Main.java
 javac -cp objects:"$jpath"/junit-4.13.2.jar LexerTests.java
 javac -cp objects:"$jpath"/junit-4.13.2.jar AstTests.java
 javac -cp objects:"$jpath"/junit-4.13.2.jar PrsTests.java
-javac -cp objects:"$jpath"/junit-4.13.2.jar ParamBinaryOprTests.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar BinaryOprTests.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar UnaryOprTests.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar LexerIsRealNumTests.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar LexerIsVarTests.java
+javac -cp objects:"$jpath"/junit-4.13.2.jar LexerSymbolClassifierTests.java
+
 javac -cp .:objects:"$jpath"/junit-4.13.2.jar Tester.java
 
 java -cp .:objects:"$jpath"/junit.jar:"$jpath"/hamcrest-core.jar org.junit.runner.JUnitCore Tester

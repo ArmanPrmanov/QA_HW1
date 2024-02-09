@@ -8,7 +8,11 @@ import parser.Prs;
 	LexerTests.class,
 	PrsTests.class,
 	AstTests.class,
-	ParamBinaryOprTests.class
+	BinaryOprTests.class,
+	UnaryOprTests.class,
+	LexerIsRealNumTests.class,
+	LexerIsVarTests.class,
+	LexerSymbolClassifierTests.class
 })
 
 public class Tester { }

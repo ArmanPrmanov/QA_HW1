@@ -15,14 +15,14 @@ import parser.AST.NumExpr;
 import parser.AST.BinaryExpr;
 
 @RunWith( Parameterized.class )
-public class ParamBinaryOprTests
+public class BinaryOprTests
 {
 	private BaseExpr e1;
 	private BaseExpr e2;
 	private Symbol opr;
 	private double res;
 
-	public ParamBinaryOprTests( Symbol opr, double d1, double d2, double res )
+	public BinaryOprTests( Symbol opr, double d1, double d2, double res )
 	{
 		this. e1 = new NumExpr( Symbol. NUMBER, d1 );
 		this. e2 = new NumExpr( Symbol. NUMBER, d2 );
@@ -40,8 +40,18 @@ public class ParamBinaryOprTests
 			{ Symbol. ADDITION, 12.0, 2.4 , 14.4 },
 			{ Symbol. ADDITION, 3.0, -3.0 , 0.0 },
 			
-			{ Symbol. DIVISION, 12.0, 0.0, Double.NaN }
+			{ Symbol. SUBTRACTION, 7.9, 3.4 , 4.5 },
+			{ Symbol. SUBTRACTION, 0.0, 23.0, -23.0 },
 
+			{ Symbol. MULTIPLICATION, 4.12, 5.3, 21.836 },
+			{ Symbol. MULTIPLICATION, -1.2, -9.9, 11.88 },
+
+			{ Symbol. DIVISION, 12.0, 0.0, Double.NaN },
+			{ Symbol. DIVISION, 4.23, 1.44, 2.9375 },
+			{ Symbol. DIVISION, 5.56, -5.23, -1.06309751 },
+
+			{ Symbol. POWER, 2.0, 3.0, 8.0 },
+			{ Symbol. POWER, 3.56, 2.0, 12.6736 }
 		};
 		return Arrays. asList( vals );
 	}
